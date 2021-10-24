@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5193829281156024081}
   - component: {fileID: 1409997099446411435}
-  - component: {fileID: 7801017557346640584}
   - component: {fileID: 1034310614285625252}
+  - component: {fileID: 7920969655863060668}
   m_Layer: 0
   m_Name: WatermelonPrefub
   m_TagString: Untagged
@@ -55,21 +55,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &7801017557346640584
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5193829281156024080}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0212380a645f4581b88289ae56e731f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  explodedFruitPrefub: {fileID: 4301088158722224836, guid: 08eea475b6edd4c6abf8af0a60accac7, type: 3}
-  costClick: 1
-  timeLifeSeconds: 8
 --- !u!70 &1034310614285625252
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -86,6 +71,21 @@ CapsuleCollider2D:
   m_Offset: {x: 0.019943953, y: -0.109692335}
   m_Size: {x: 2.5143473, y: 2.7337317}
   m_Direction: 0
+--- !u!114 &7920969655863060668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5193829281156024080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bc5de6bc5ecd4d33b2f0944b469a0b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _explodedFruitPrefub: {fileID: 4301088158722224836, guid: 08eea475b6edd4c6abf8af0a60accac7, type: 3}
+  _costClick: 1
+  _timeLifeSeconds: 8
 --- !u!1 &5684008673481167924
 GameObject:
   m_ObjectHideFlags: 0

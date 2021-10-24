@@ -33608,7 +33608,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.010186553, y: 0}
@@ -33623,11 +33623,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 3261722189096363128}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00e6a73530ad74a81beea925e4de9e63, type: 3}
+  m_Script: {fileID: 11500000, guid: ab825b8a92d2145869e5876c798d752d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particleExlosion: {fileID: 1959148109641334486}
-  bombModel: {fileID: 6516484924989360990}
+  _modelBomb: {fileID: 6516484924989360990}
+  _exlposionBombParticle: {fileID: 1959148109641334486}
+  _timeLifeSeconds: 8
 --- !u!1 &6516484924989360990
 GameObject:
   m_ObjectHideFlags: 0

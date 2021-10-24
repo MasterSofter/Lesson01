@@ -10,10 +10,20 @@ public class BladeMechanic : MonoBehaviour
     private Camera cameraMain;
     private CircleCollider2D circleCollider2D;
 
-    [SerializeField]
-    private GameObject trailBlade;
+    [SerializeField] private GameObject trailBlade;
 
     public Vector2 DirectionBlade;
+ 
+    private void StartCutting() {
+        trailBlade.SetActive(true);
+        circleCollider2D.enabled = true;
+    }
+
+    private void StopCutting() {
+        circleCollider2D.enabled = false;
+        trailBlade.SetActive(false);
+    }
+
     private void Start()
     {
         trailBlade.SetActive(false);
@@ -36,16 +46,4 @@ public class BladeMechanic : MonoBehaviour
         DirectionBlade = (newPosition - previousPosition).normalized;
         rigidBody2D.position = newPosition;
     }
-
-    void StartCutting() {
-        trailBlade.SetActive(true);
-        circleCollider2D.enabled = true;
-    }
-
-    void StopCutting() {
-        circleCollider2D.enabled = false;
-        trailBlade.SetActive(false);
-    }
-
-
 }
