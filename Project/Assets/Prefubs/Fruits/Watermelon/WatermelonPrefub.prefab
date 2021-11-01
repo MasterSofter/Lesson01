@@ -80,12 +80,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 5193829281156024080}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bc5de6bc5ecd4d33b2f0944b469a0b8, type: 3}
+  m_Script: {fileID: 11500000, guid: 77c90c495e9354da59aae8519a263785, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _explodedFruitPrefub: {fileID: 4301088158722224836, guid: 08eea475b6edd4c6abf8af0a60accac7, type: 3}
-  _costClick: 1
-  _timeLifeSeconds: 8
+  _timeLifeSeconds: 12
+  FruitEnumeration: 0
 --- !u!1 &5684008673481167924
 GameObject:
   m_ObjectHideFlags: 0

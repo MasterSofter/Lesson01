@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6232822214404133401}
-  - component: {fileID: 6140967390275873794}
   - component: {fileID: 8716110117786013147}
   - component: {fileID: 2085309363002159827}
+  - component: {fileID: 2715197966379260894}
   m_Layer: 0
   m_Name: GarnetPrefub
   m_TagString: Untagged
@@ -34,21 +34,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6140967390275873794
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6232822214404133402}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d11e373d8b8ff4e02b33264b6ef7da57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _explodedFruitPrefub: {fileID: 2026229846911873443, guid: 57e92a4cc536f4129a28313379e3a272, type: 3}
-  _costClick: 5
-  _timeLifeSeconds: 12
 --- !u!50 &8716110117786013147
 Rigidbody2D:
   serializedVersion: 4
@@ -86,6 +71,19 @@ CapsuleCollider2D:
   m_Offset: {x: 0.028178573, y: 0.1552422}
   m_Size: {x: 3.1551769, y: 3.1551769}
   m_Direction: 0
+--- !u!114 &2715197966379260894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6232822214404133402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c4694dcef06049e2a268caaf59839ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _explodedFruitPrefub: {fileID: 2026229846911873443, guid: 57e92a4cc536f4129a28313379e3a272, type: 3}
 --- !u!1 &6538671501268617165
 GameObject:
   m_ObjectHideFlags: 0

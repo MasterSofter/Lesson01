@@ -121,9 +121,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3529511803312056446}
-  - component: {fileID: 8624704175003104054}
   - component: {fileID: 8356926124274261666}
   - component: {fileID: 8240266414712301372}
+  - component: {fileID: 6050654345167759006}
   m_Layer: 0
   m_Name: WatermelonExplodedPrefub
   m_TagString: Untagged
@@ -148,20 +148,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8624704175003104054
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4301088158722224836}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7f3f6d80e93f48f58e70865011b5e28, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _startForce: 0
-  _timeLifeSeconds: 10
 --- !u!65 &8356926124274261666
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -191,6 +177,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &6050654345167759006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4301088158722224836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7f3f6d80e93f48f58e70865011b5e28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _startForce: 0
 --- !u!1 &7210804206857169891
 GameObject:
   m_ObjectHideFlags: 0

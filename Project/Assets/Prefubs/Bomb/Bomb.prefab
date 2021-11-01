@@ -33553,7 +33553,7 @@ GameObject:
   - component: {fileID: 3261722189096363132}
   - component: {fileID: 3261722189096363135}
   - component: {fileID: 3261722189096363134}
-  - component: {fileID: 3261722189096363129}
+  - component: {fileID: 5122162178210677175}
   m_Layer: 0
   m_Name: Bomb
   m_TagString: Untagged
@@ -33614,7 +33614,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0.010186553, y: 0}
   m_Size: {x: 2.4762065, y: 2.4762065}
   m_Direction: 0
---- !u!114 &3261722189096363129
+--- !u!114 &5122162178210677175
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -33623,12 +33623,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3261722189096363128}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab825b8a92d2145869e5876c798d752d, type: 3}
+  m_Script: {fileID: 11500000, guid: afd7605f0aa274a299692f2290aac69d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _modelBomb: {fileID: 6516484924989360990}
   _exlposionBombParticle: {fileID: 1959148109641334486}
-  _timeLifeSeconds: 8
 --- !u!1 &6516484924989360990
 GameObject:
   m_ObjectHideFlags: 0

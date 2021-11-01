@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Cook
   - Blade
+  - DestroyerObjects
   layers:
   - Default
   - TransparentFX
