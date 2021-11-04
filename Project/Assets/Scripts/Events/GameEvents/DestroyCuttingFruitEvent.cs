@@ -2,4 +2,5 @@
 
 public class DestroyCuttingFruitEvent<TValue> : CompositePresentationEvent<TValue>
 {
+
 }

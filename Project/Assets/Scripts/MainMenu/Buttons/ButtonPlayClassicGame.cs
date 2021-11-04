@@ -1,6 +1,8 @@
 using System.Collections;
 using EventBus.Interfaces;
 using UnityEngine;
+using Zenject;
+
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(CapsuleCollider2D))]
 public class ButtonPlayClassicGame : MonoBehaviour
@@ -8,12 +10,10 @@ public class ButtonPlayClassicGame : MonoBehaviour
     [SerializeField] private GameObject _model;
     [SerializeField] private GameObject _explodedFruitPrefub;   //префаб фрукта, разбитого на части
     public IEventBus _eventBus;
-    public FruitDm FruitDm;
 
-    public void Init(IEventBus eventBus)
-    {
-        _eventBus = eventBus;
-    }
+    [Inject]
+    public void Construct(IEventBus eventBus) => _eventBus = eventBus;
+  
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

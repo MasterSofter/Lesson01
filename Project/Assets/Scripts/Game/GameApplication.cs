@@ -2,15 +2,11 @@
 using EventBus.Interfaces;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using Zenject;
 
 public class GameApplication : MonoBehaviour
 {
     private IEventBus _eventBus;
-
-    [SerializeField] private GameViewer _gameViewer;
-
-    private GameManager _gameManager;
-    private GameDataModel _gameDataModel;
 
     private IEnumerator TimeTick() {
         while (true) {
@@ -29,16 +25,9 @@ public class GameApplication : MonoBehaviour
         }
     }
 
-    private void Awake()
-    {
-        _eventBus = new EventBus.Composite.Events.EventBus();
+    [Inject] public void Construct(IEventBus eventBus) {
+        _eventBus = eventBus;
         _eventBus.GetEvent<ButtonClickLoadSceneEvent>().Subscribe(OnLoadScene);
-
-
-        _gameDataModel = new GameDataModel(_eventBus);
-        _gameViewer.Init(_eventBus, _gameDataModel);
-        _gameManager = new GameManager(_eventBus, _gameViewer, _gameDataModel);
-
         StartCoroutine(TimeTick());
-    }
+    } 
 }

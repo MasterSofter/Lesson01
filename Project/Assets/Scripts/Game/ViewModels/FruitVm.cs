@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using EventBus.Interfaces;
+using Zenject;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(CapsuleCollider2D))]
@@ -30,7 +31,7 @@ public class FruitVm : MonoBehaviour
         _eventBus.GetEvent<FruitCutEvent<FruitVm>>().Publish(this); //сообщили о разрезе фрукта
     }
 
-    public void Init(IEventBus eventBus, FruitDm fruitDm) {
+   public void Init(IEventBus eventBus, FruitDm fruitDm) {
         _eventBus = eventBus;
         _fruitDm = fruitDm;
     }

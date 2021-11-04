@@ -1,6 +1,8 @@
 using EventBus.Interfaces;
+using UnityEngine;
+using Zenject;
 
-public sealed class GameDataModel
+public sealed class GameDataModel : MonoBehaviour, IGameDataModel
 {
     private EnumGameState _state;        //текущее игровое состояния
     private float _gameTime;         //текущее игровое время
@@ -8,11 +10,8 @@ public sealed class GameDataModel
     private int _countMisses;
 
     private IEventBus _eventBus;
-
-    public GameDataModel(IEventBus eventBus)
-    {
-        _eventBus = eventBus;
-    }
+    
+    [Inject] public void Construct(IEventBus eventBus) => _eventBus = eventBus;
 
     public float GameTime
     {

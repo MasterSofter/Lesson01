@@ -3,4 +3,3 @@
 public class DestroyGameObjectEvent<TValue> : CompositePresentationEvent<TValue>
 {
 }
-
