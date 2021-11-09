@@ -147,6 +147,7 @@ public class ArcadeGameViewer : MonoBehaviour, IGameViewer
         newGameObj.GetComponent<Rigidbody2D>().AddForce(_spawnPoints[rundomIndexSpawnPoint].transform.up * _startSpawnFruitForce, ForceMode2D.Impulse);
         newGameObj.GetComponent<Rigidbody2D>().AddTorque(_startFruitTorgue);
         newGameObj.GetComponent<SuperFruitVm>().Init(_eventBus, superFruitDm);
+        newGameObj.GetComponent<SoundHitSuperFruit>().Init(_eventBus);
     }
 
     public void SpawnBomb(BombDm bombDm)
@@ -191,7 +192,7 @@ public class ArcadeGameViewer : MonoBehaviour, IGameViewer
     }
     public IEnumerator ShowRestartGame()
     {
-        _eventBus.GetEvent<GameStartEvent>().Publish(new GameStartEventArg(true));
+        _eventBus.GetEvent<GameRestartEvent>().Publish(new GameRestartEventArg(true));
 
         if (_gameDataModel.GameState == EnumGameState.GameOver)
         {
@@ -207,7 +208,7 @@ public class ArcadeGameViewer : MonoBehaviour, IGameViewer
         }
         _pauseButtonAnimator.Play("Show_ButtonAnimation");
 
-        _eventBus.GetEvent<GameStartEvent>().Publish(new GameStartEventArg(false));
+        _eventBus.GetEvent<GameRestartEvent>().Publish(new GameRestartEventArg(false));
     }
     public IEnumerator ShowResumeGame()
     {

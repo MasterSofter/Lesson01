@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 5193829281156024080}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.3802038, y: 0.48984075, z: 0.0009831069}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_Children:
   - {fileID: 5019956029151366798}
   m_Father: {fileID: 0}
@@ -84,8 +84,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _explodedFruitPrefub: {fileID: 4301088158722224836, guid: 08eea475b6edd4c6abf8af0a60accac7, type: 3}
-  _timeLifeSeconds: 12
-  FruitEnumeration: 0
 --- !u!1 &5684008673481167924
 GameObject:
   m_ObjectHideFlags: 0

@@ -29,7 +29,7 @@ public class ButtonPlayClassicGame : MonoBehaviour
         GameObject newGameObj = Instantiate(_explodedFruitPrefub, transform.position, Quaternion.identity);
         Vector2 bladeDirection = collision.gameObject.GetComponent<Blade>().DirectionBlade;
         newGameObj.transform.right = bladeDirection;
-        
+
         yield return new WaitForSeconds(0.5f);
         _eventBus.GetEvent<ButtonClickLoadSceneEvent>().Publish(EnumScene.ClassicGameScene);
         Destroy(gameObject);

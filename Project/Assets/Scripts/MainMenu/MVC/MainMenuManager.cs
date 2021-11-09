@@ -15,6 +15,7 @@ public class MainMenuManager : MonoBehaviour, IMainMenuManager
     [Inject]
     public void Construct(IEventBus eventBus, IMainMenuDataModel menuDataModel)
     {
+        Debug.Log("Конструктор MenuManager");
         _eventBus = eventBus;
         _eventBus.GetEvent<MenuStartEvent>().Subscribe(OnMenuStart);
         _menuDataModel = menuDataModel;

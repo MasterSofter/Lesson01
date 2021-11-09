@@ -11,6 +11,7 @@ public class MainMenuDataModel : MonoBehaviour, IMainMenuDataModel
     [Inject]
     public void Construct(IEventBus eventBus)
     {
+        Debug.Log("Конструктор MenuDataModel");
         _eventBus = eventBus;
     }
 

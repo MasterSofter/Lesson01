@@ -70,6 +70,12 @@ public class ClassicGameManager : MonoBehaviour , IGameManager
             _gameDataModel.GameState = EnumGameState.Game;
         }
     }
+
+    public void OnGameRestart(GameRestartEventArg arg) {
+        if (!arg.Started) _gameDataModel.GameState = EnumGameState.StartGame;
+            
+    }
+
     public void OnResumeGame(GameResumeEventArg arg){
         if (arg.Started)
         {
@@ -121,6 +127,7 @@ public class ClassicGameManager : MonoBehaviour , IGameManager
 
    private void InitBusEvents() {
         _eventBus.GetEvent<GameStartEvent>().Subscribe(OnGameStart);
+        _eventBus.GetEvent<GameRestartEvent>().Subscribe(OnGameRestart);
         _eventBus.GetEvent<GameResumeEvent>().Subscribe(OnResumeGame);
         _eventBus.GetEvent<GamePauseEvent>().Subscribe(OnPauseGame);
         _eventBus.GetEvent<FruitCutEvent<FruitDm>>().Subscribe(OnFruitCut);

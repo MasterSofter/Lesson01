@@ -16,6 +16,7 @@ public class MainMenuViewer : MonoBehaviour, IMainMenuViewer
         switch (enumMenuState)
         {
             case EnumMenuState.StartMenu:
+                //_eventBus.GetEvent<MenuStartEvent>().Publish(new MenuStartEventArg(false));
                 StartCoroutine(ShowStartMenuAnimation());
                 break;
             case EnumMenuState.ExitMenu:
@@ -87,6 +88,7 @@ public class MainMenuViewer : MonoBehaviour, IMainMenuViewer
     [Inject]
     public void Construct(IEventBus eventBus)
     {
+        Debug.Log("Конструктор MenuViewer");
         _eventBus = eventBus;
         InitBusEvents();
     }
